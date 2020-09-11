@@ -1,4 +1,6 @@
 
+module.exports = Phrase
+
 // Adds 'reverse' to all strings.
 String.prototype.reverse = function() {
   return Array.from(this).reverse().join("");
@@ -10,11 +12,6 @@ function Phrase(content) {
 
   this.processor = function(string) {
     return string.toLowerCase();
-  }
-
-  // Makes the phrase LOUDER
-  this.louder = function() {
-    return this.content.toUpperCase();
   }
 
   // Returns content processed for palindrome testing.
