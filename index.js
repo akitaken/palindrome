@@ -24,8 +24,8 @@ function Phrase(content) {
   // new Phrase("Hello, world!").letters() === "Helloworld"
 
   this.letters = function letters() {
-    const letterRegex = /[a-z]/i;
-    return Array.from(this.content).filter(c => c.match(letterRegex)).join("");
+    const letterRegex = /[a-z]/gi;
+    return (this.content.match(letterRegex) || []).join("");
   }
 
 
